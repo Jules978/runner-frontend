@@ -1,6 +1,6 @@
 export class Training {
     id: number;
-    name: String;
+    name: string;
     description: string;
     type: string;
 }
