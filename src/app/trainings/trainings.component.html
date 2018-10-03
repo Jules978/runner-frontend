@@ -1,3 +1,6 @@
-<h2>{{training.name}}</h2>
-<div><span>description: </span> {{training.description}}</div>
-<div><span>type: </span> {{training.type}}</div>
+<h2>TRAININGS</h2>
+<ul class="trainings">
+  <li *ngFor="let training of trainings">
+    <span class="badge">{{training.type}}</span> {{training.name}}
+  </li>
+</ul>

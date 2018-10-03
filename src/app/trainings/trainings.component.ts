@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Training } from '../Training';
+import { TRAININGS} from '../mock-trainings';
 
 @Component({
   selector: 'app-trainings',
@@ -8,12 +9,7 @@ import { Training } from '../Training';
 })
 export class TrainingsComponent implements OnInit {
 
-  training: Training = {
-    id: 1,
-    name: 'sub 45min 10k',
-    description: 'faster 10k, with some interval training',
-    type: 'speed improvement'
-  }
+  trainings = TRAININGS;
 
   constructor() { }
 
