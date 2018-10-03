@@ -7,7 +7,7 @@ export class Run {
     distance: number;
     overdue: string;
     score: number;
-    time: string;
+    time: number;
     training: Training;
 
 }

@@ -1,0 +1,7 @@
+<h2>RUNS</h2>
+<ul class="runs">
+  <li *ngFor="let run of runs">
+    <span class="badge">{{run.date}}</span> {{run.distance}}  km
+    <p><span>training: </span>{{run.training.name}}</p>
+  </li>
+</ul>

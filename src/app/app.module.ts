@@ -8,13 +8,15 @@ import { TrainingDetailComponent } from './training-detail/training-detail.compo
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RunsComponent } from './runs/runs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TrainingsComponent,
     TrainingDetailComponent,
-    DashboardComponent
+    DashboardComponent,
+    RunsComponent
   ],
   imports: [
     BrowserModule,
