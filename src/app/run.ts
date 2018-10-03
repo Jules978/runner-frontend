@@ -9,5 +9,6 @@ export class Run {
     score: number;
     time: number;
     training: Training;
+    comment: string;
 
 }

@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RunsComponent } from './runs/runs.component';
+import { RunDetailComponent } from './run-detail/run-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RunsComponent } from './runs/runs.component';
     TrainingsComponent,
     TrainingDetailComponent,
     DashboardComponent,
-    RunsComponent
+    RunsComponent,
+    RunDetailComponent
   ],
   imports: [
     BrowserModule,

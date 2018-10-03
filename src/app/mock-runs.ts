@@ -15,7 +15,8 @@ export const RUNS: Run[] = [
             name: 'marathon',
             description: 'wooo',
             type: 'test'
-        }
+        },
+        comment: "nice technology!"
     },
     {
         id: 2,
@@ -30,7 +31,8 @@ export const RUNS: Run[] = [
             name: 'marathon',
             description: 'wooo',
             type: 'test'
-        }
+        },
+        comment: "eeeeeh"
     },
     {
         id: 3,
@@ -45,6 +47,7 @@ export const RUNS: Run[] = [
             name: 'marathon',
             description: 'wooo',
             type: 'test'
-        }
+        },
+        comment: "..."
     }
 ]

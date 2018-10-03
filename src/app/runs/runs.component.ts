@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Run } from '../run';
 import { RUNS} from '../mock-runs';
 
 @Component({
@@ -8,6 +9,10 @@ import { RUNS} from '../mock-runs';
 })
 export class RunsComponent implements OnInit {
   runs = RUNS;
+  selectedRun: Run;
+onSelect(run: Run): void {
+  this.selectedRun = run;
+}
   constructor() { }
 
   ngOnInit() {
