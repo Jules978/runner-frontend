@@ -2,13 +2,14 @@ import { Training } from "./training";
 
 export class Run {
     id: number;
-    avspeed: number;
     date: string;
     distance: number;
-    overdue: string;
-    score: number;
+    title: string;
     time: number;
-    training: Training;
+    avspeed: number;
+    score: number;
+    overdue: string;
+    finished: string;
     comment: string;
-
+    training: Training;
 }

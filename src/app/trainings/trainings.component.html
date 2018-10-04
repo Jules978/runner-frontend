@@ -1,6 +1,21 @@
 <h2>TRAININGS</h2>
-<ul class="trainings">
-  <li *ngFor="let training of trainings">
-    <span class="badge">{{training.type}}</span> {{training.name}}
-  </li>
-</ul>
+
+
+<div class=.container-fluid>
+    <div class="row">
+      <div class="col-lg">
+        <app-training-detail [training]="selectedTraining" ></app-training-detail>
+      </div>
+  
+      <div class="col-3">
+        <ul class="trainings">
+          <li *ngFor="let training of trainings" [class.selected]="training === selectedTraining"
+          (click)="onSelect(training)">
+            <span class="badge">{{training.type}}</span> {{training.name}}
+          </li>
+        </ul>
+      </div>
+     
+    </div>
+  </div>
+  

@@ -1,9 +1,11 @@
 <div *ngIf="run">
 
-  <h2>{{run.date}} - {{run.distance}} Details</h2>
-  <div><span>speed: </span>{{run.avspeed}}</div>
-  <div><span>training: </span>{{run.training.name}}</div>
-  <div><span>comment: </span>{{run.comment}}</div>
+  <h2>{{run.date}} - {{run.title}}: Details</h2>
+  <div><span>Distance: </span>{{run.distance}}</div>
+  <div *ngIf="run.time"><span>Time: </span>{{run.time}}</div>
+  <div *ngIf="run.time"><span>Speed: </span>{{run.avspeed}}</div>
+  <div><span>Training: </span>{{run.training.name}}</div>
+  <div><span>Comment: </span>{{run.comment}}</div>
   <div>
     <label>name:
       <input [(ngModel)]="run.comment" placeholder="comment"/>
