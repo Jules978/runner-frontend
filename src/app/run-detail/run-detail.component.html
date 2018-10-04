@@ -8,8 +8,21 @@
   <div><span>Comment: </span>{{run.comment}}</div>
   <div>
     <label>name:
-      <input [(ngModel)]="run.comment" placeholder="comment"/>
+      <input [(ngModel)]="run.title" placeholder="new title" value="{{run.title}}"/>
     </label>
+    <br>
+    <label>distance:
+      <input [(ngModel)]="run.distance" placeholder="new distance" value="{{run.distance}}"/>
+    </label>
+    <br>
+    <label>time:
+      <input [(ngModel)]="run.time" placeholder="new time" value="{{run.time}}"/>
+    </label>
+      <br>
+    <label>comment:
+      <input [(ngModel)]="run.comment" placeholder="new comment" value="{{run.comment}}"/>
+    </label>
+    <button (click)="updateRun(run)"> test update</button>
   </div>
 
 </div>

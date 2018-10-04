@@ -9,6 +9,10 @@ import { Training } from '../training';
 })
 export class RunDetailComponent implements OnInit {
   @Input() run: Run;
+
+  updateRun(run: Run): void {
+    console.log(run);
+  }
   constructor() { }
 
   ngOnInit() {
