@@ -6,23 +6,30 @@
   <div *ngIf="run.time"><span>Speed: </span>{{run.avspeed}}</div>
   <div><span>Training: </span>{{run.training.name}}</div>
   <div><span>Comment: </span>{{run.comment}}</div>
-  <div>
+  <button (click)="showHideEdit()">{{editButton}}</button>
+  <div *ngIf="showUpdateRun">
     <label>name:
-      <input [(ngModel)]="run.title" placeholder="new title" value="{{run.title}}"/>
+      <input [(ngModel)]="editRun.title" placeholder="new title" value="{{editRun.title}}"/>
     </label>
     <br>
     <label>distance:
-      <input [(ngModel)]="run.distance" placeholder="new distance" value="{{run.distance}}"/>
+      <input [(ngModel)]="editRun.distance" placeholder="new distance" value="{{editRun.distance}}"/>
     </label>
     <br>
     <label>time:
-      <input [(ngModel)]="run.time" placeholder="new time" value="{{run.time}}"/>
+      <input [(ngModel)]="editRun.time" placeholder="new time" value="{{editRun.time}}"/>
     </label>
       <br>
     <label>comment:
-      <input [(ngModel)]="run.comment" placeholder="new comment" value="{{run.comment}}"/>
+      <input [(ngModel)]="editRun.comment" placeholder="new comment" value="{{editRun.comment}}"/>
     </label>
-    <button (click)="updateRun(run)"> test update</button>
+    <br>
+    <label>training:
+        <select [(ngModel)]="editRun.training">
+          <option *ngFor="let t of trainings" [ngValue]="t">{{t.name}}</option>
+        </select>
+      </label>
+    <button (click)="updateRun(editRun)"> test update</button>
   </div>
 
 </div>

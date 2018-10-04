@@ -15,7 +15,7 @@ export class RunsComponent implements OnInit {
   onSelect(run: Run): void {
     this.selectedRun = run;
   }
-
+  
   getRuns(): void {
     this.runService.getRuns().subscribe(runs => this.runs = runs);
 

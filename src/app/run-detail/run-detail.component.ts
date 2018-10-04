@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Run } from '../run';
 import { Training } from '../training';
+import { TrainingService } from '../training.service';
+import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-run-detail',
@@ -9,13 +11,39 @@ import { Training } from '../training';
 })
 export class RunDetailComponent implements OnInit {
   @Input() run: Run;
+  editRun: Run;
+  selectedTraining: Training;
+  trainings: Training[];
+  showUpdateRun: boolean = false;
+  editButton: string = "edit run";
 
-  updateRun(run: Run): void {
-    console.log(run);
+  getTrainings(): void {
+    this.trainingService.getTrainings().subscribe(trainings => this.trainings = trainings);
   }
-  constructor() { }
+  showHideEdit(): void {
+    if(this.showUpdateRun){
+      this.showUpdateRun = false;
+     
+    } else {
+      this.showUpdateRun = true;
+      this.setEditRun(this.run);
+    }
+  }
+
+  setEditRun(run: Run){
+    this.editRun = Object.assign(new Run(), run);
+  }
+
+  updateRun(editedRun: Run): void {
+    console.log(editedRun);
+    this.run = Object.assign(new Run(), this.editRun);
+  
+  }
+  constructor(private trainingService: TrainingService) { }
 
   ngOnInit() {
+    this.getTrainings();
+    this.setEditRun(this.run);
   }
 
 }
