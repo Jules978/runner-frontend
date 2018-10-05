@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Run } from '../run';
 import { Training } from '../training';
 import { TrainingService } from '../training.service';
-import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-run-detail',
