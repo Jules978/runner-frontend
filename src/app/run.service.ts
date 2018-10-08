@@ -34,20 +34,20 @@ export class RunService {
   }
 
   updateRun(run: Run): Observable<any> {
-    const url = '{this.updateRunUrl}/${hero.id}'
+    const url = '{this.updateRunUrl}/${run.id}'
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
-    return this.http.put(url, run, httpOptions).pipe(catchError(this.handleError<any>('updateHero'))
+    return this.http.put(url, run, httpOptions).pipe(catchError(this.handleError<any>('updateTraining'))
     );
   }
 
   finishRun(run: Run): Observable<any> {
-    const url = '{this.baseRunUrl}/finishrun/${hero.id}'
+    const url = '{this.baseRunUrl}/finishrun/${training.id}'
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
-    return this.http.put(url, run, httpOptions).pipe(catchError(this.handleError<any>('updateHero'))
+    return this.http.put(url, run, httpOptions).pipe(catchError(this.handleError<any>('updateTraining'))
     );
   }
 
@@ -63,13 +63,13 @@ export class RunService {
 
   deleteRun(run: Run | number): Observable<Run> {
     const id = typeof run === 'number' ? run : run.id;
-    const url = 'this.baseRunUrl/delete/${id}'
+    const url = '{this.baseRunUrl}/delete/${id}'
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
 
     return this.http.delete<Run>(url, httpOptions).pipe(
-      catchError(this.handleError<Run>('deleteHero'))
+      catchError(this.handleError<Run>('deleteTraining'))
     );
   }
 
