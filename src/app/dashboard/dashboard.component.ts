@@ -21,6 +21,15 @@ export class DashboardComponent implements OnInit {
 
   }
 
+  giveClass(overdue: string): string{ 
+    if(overdue == "no"){
+      return "list-group-item list-group-item-action"
+    } else { 
+      return "list-group-item list-group-item-action list-group-item-warning"
+    }
+  }
+
+
   constructor(private runService: RunService) { }
 
   ngOnInit() {

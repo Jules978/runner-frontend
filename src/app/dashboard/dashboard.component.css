@@ -1,10 +1,14 @@
-#overdueRun{
-    color: #721c24;
-    background-color: #f5c6cb;
-}
 
 #main {
-    padding-right: 0px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+    
+}
+#title{
+    text-align:center;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    margin: 0px;
 }
 
 #detailsContainer {
@@ -13,3 +17,4 @@
 #listContainer {
     padding: 0px;
 }
+

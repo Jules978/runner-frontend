@@ -1,14 +1,15 @@
 <div class="container-fluid" id="main">
+  <h1 id="title">Main menu: unfinished runs</h1>
   <div class="row">
     <div class="col-lg" id="detailsContainer">
       <app-run-detail [run]="selectedRun" class="container-fluid"></app-run-detail>
      
     </div>
 
-    <div class="col-3" id="listContainer">
+    <div class="col col-lg-3" id="listContainer">
       <ul class="runs" class="list-group list-group-flush">
         <li *ngFor="let run of runs" [class.selected]="run === selectedRun"
-        (click)="onSelect(run)" class="list-group-item list-group-item-action flex-column align-items-start" id="{{run.overdue}}">
+        (click)="onSelect(run)" [ngClass]="giveClass(run.overdue)">
       
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{run.distance}} km</h5>
@@ -22,4 +23,12 @@
    
   </div>
 </div>
+
+<!--
+
+  [ngClass]="{
+          'list-group-item list-group-item-action list-group-item-danger': run.overdue == 'overdueRun',
+          'list-group-item list-group-item-action list-group-item-light': run.overdue == 'no'
+        }"
+-->
 
