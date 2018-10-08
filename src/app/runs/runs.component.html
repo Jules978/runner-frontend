@@ -8,7 +8,7 @@
     <div class="col-3">
       <ul class="runs">
         <li *ngFor="let run of runs" [class.selected]="run === selectedRun"
-        (click)="onSelect(run)">>
+        (click)="onSelect(run)">
           
           <span class="badge">{{run.date}}</span> {{run.title}}  
           <p><span>Distance: </span>{{run.distance}}</p>

@@ -1,3 +1,22 @@
-<p>
-  unfinished-runs works!
-</p>
+<h2>Dashboard</h2>
+<div class=.container-fluid>
+  <div class="row">
+    <div class="col-lg">
+      <app-run-detail [run]="selectedRun"></app-run-detail>
+    </div>
+
+    <div class="col-3">
+      <ul class="runs">
+        <li *ngFor="let run of runs" [class.selected]="run === selectedRun"
+        (click)="onSelect(run)">
+          
+          <span class="badge">{{run.date}}</span> {{run.title}}  
+          <p><span>Distance: </span>{{run.distance}}</p>
+          <p><span>training: </span>{{run.training.name}}</p>
+        </li>
+      </ul>
+    </div>
+   
+  </div>
+</div>
+

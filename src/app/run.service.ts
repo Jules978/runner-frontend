@@ -13,28 +13,37 @@ import { TRAININGS } from './mock-trainings';
 })
 export class RunService {
 
-  private runSortedUrl = "http://localhost:8080/api/run/sortbydate"
+  private runSortedUrl = "http://localhost:8080/api/run/allsortbydate"
   private allTrainingsUrl = "http://localhost:8080/api/training/all"
+  
   private baseRunUrl = "http://localhost:8080/api/run"
 
 
 
 
   getRuns(): Observable<Run[]> {
-    return this.http.get<Run[]>(this.runSortedUrl).pipe(
+    const url = 'http://localhost:8080/api/run/allsortbydate'
+    return this.http.get<Run[]>(url).pipe(
+      catchError(this.handleError('getRuns', []))
+    );
+  }
+
+  getUnfinishedRuns():Observable<Run[]> {
+    const url = 'http://localhost:8080/api/run/unfinished'
+    return this.http.get<Run[]>(url).pipe(
       catchError(this.handleError('getRuns', []))
     );
   }
 
   getRunById(id: number): Observable<Run> {
-    const url = '{this.baseRunUrl}/${id}';
+    const url = 'http://localhost:8080/api/run/${id}';
     return this.http.get<Run>(url).pipe(
       catchError(this.handleError<Run>('getRunById=${id}'))
     );
   }
 
   updateRun(run: Run): Observable<any> {
-    const url = '{this.updateRunUrl}/${run.id}'
+    const url = 'http://localhost:8080/api/run/${run.id}'
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
@@ -43,7 +52,7 @@ export class RunService {
   }
 
   finishRun(run: Run): Observable<any> {
-    const url = '{this.baseRunUrl}/finishrun/${training.id}'
+    const url = 'http://localhost:8080/api/run/finishrun/${training.id}'
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
@@ -52,7 +61,7 @@ export class RunService {
   }
 
   addRun(run: Run): Observable<Run> {
-    const url = '{this.baseRunUrl}/add'
+    const url = 'http://localhost:8080/api/run/add'
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
@@ -63,7 +72,7 @@ export class RunService {
 
   deleteRun(run: Run | number): Observable<Run> {
     const id = typeof run === 'number' ? run : run.id;
-    const url = '{this.baseRunUrl}/delete/${id}'
+    const url = 'http://localhost:8080/api/run/delete/${id}'
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };

@@ -1,12 +1,18 @@
 <div *ngIf="run">
 
-  <h2>{{run.date}} - {{run.title}}: Details</h2>
-  <div><span>Distance: </span>{{run.distance}}</div>
-  <div *ngIf="run.time"><span>Time: </span>{{run.time}}</div>
-  <div *ngIf="run.time"><span>Speed: </span>{{run.avspeed}}</div>
-  <div><span>Training: </span>{{run.training.name}}</div>
-  <div><span>Comment: </span>{{run.comment}}</div>
-  <button (click)="showHideEdit()">{{editButton}}</button>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{run.title}}: Details</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{run.date}} - {{run.distance}} km</h6>
+      <p class="card-text" *ngIf="run.time" ><span>Time: </span>{{run.time}} min</p>
+      <p class="card-text" *ngIf="run.time" ><span>Speed: </span>{{run.avspeed}} min/km</p>
+      <p class="card-text"><span>Training: </span>{{run.training.name}}</p>
+      <p class="card-text"><span>Comment: </span>{{run.comment}}</p>
+      <button (click)="showHideEdit()" class="btn btn-primary">{{editButton}}</button>
+     
+    </div>
+  </div>
+
   <div *ngIf="showUpdateRun">
     <label>name:
       <input [(ngModel)]="editRun.title" placeholder="new title" value="{{editRun.title}}"/>
