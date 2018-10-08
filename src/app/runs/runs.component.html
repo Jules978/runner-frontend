@@ -1,11 +1,11 @@
-<div class="container-fluid">
-    <h1 id="title">All runs</h1>
+<div class="container">
+  <h2 id="title">All runs!</h2>
   <div class="row">
-    <div class="col">
+    <div class="col col-lg">
       <app-run-detail [run]="selectedRun" class="container-fluid"></app-run-detail>
     </div>
-
-    <div class="col col-lg-3" id="listContainer">
+    
+    <div class="col-lg-3">
       <ul class="runs" class="list-group list-group-flush">
         <li *ngFor="let run of runs" [class.selected]="run === selectedRun"
         (click)="onSelect(run)" class="list-group-item list-group-item-action">
@@ -18,7 +18,5 @@
         </li>
       </ul>
     </div>
-   
   </div>
 </div>
-
