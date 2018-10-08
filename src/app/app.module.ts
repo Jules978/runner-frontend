@@ -10,6 +10,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RunsComponent } from './runs/runs.component';
 import { RunDetailComponent } from './run-detail/run-detail.component';
+import { UnfinishedRunsComponent } from './unfinished-runs/unfinished-runs.component';
+import { CreateRunComponent } from './create-run/create-run.component';
+import { CreateTrainingComponent } from './create-training/create-training.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { RunDetailComponent } from './run-detail/run-detail.component';
     TrainingDetailComponent,
     DashboardComponent,
     RunsComponent,
-    RunDetailComponent
+    RunDetailComponent,
+    UnfinishedRunsComponent,
+    CreateRunComponent,
+    CreateTrainingComponent
   ],
   imports: [
     BrowserModule,
