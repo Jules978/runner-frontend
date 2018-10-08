@@ -1,7 +1,6 @@
 
 #main {
-    padding-left: 1rem;
-    padding-right: 1rem;
+   padding: 0rem;
     
     
 }
@@ -9,6 +8,7 @@
     text-align:center;
     border-bottom: 1px solid rgba(0,0,0,.125);
     margin: 0px;
+    padding: 1rem;
 }
 
 #detailsContainer {
@@ -16,5 +16,9 @@
 }
 #listContainer {
     padding: 0px;
+}
+
+.row {
+    margin-right: 0px;
 }
 

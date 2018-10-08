@@ -1,14 +1,25 @@
 
 #main {
-    padding: 1rem;
-    
-}
-#title{
-    text-align:center;
-    border-bottom: 1px solid rgba(0,0,0,.125);
-    margin: 0px;
-}
-
-#listContainer {
-    padding: 0px;
-}
+    padding: 0rem;
+     
+     
+ }
+ #title{
+     text-align:center;
+     border-bottom: 1px solid rgba(0,0,0,.125);
+     margin: 0px;
+     padding: 1rem;
+ }
+ 
+ #detailsContainer {
+     
+ }
+ #listContainer {
+     padding: 0px;
+ }
+ 
+ .row {
+     margin-right: 0px;
+ }
+ 
+ 
