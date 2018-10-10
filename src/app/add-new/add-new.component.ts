@@ -8,17 +8,18 @@ import { Training } from '../training';
 import { TrainingService } from '../training.service';
 import { RunService } from '../run.service';
 
+
 @Component({
-  selector: 'app-create-run',
-  templateUrl: './create-run.component.html',
-  styleUrls: ['./create-run.component.css']
+  selector: 'app-add-new',
+  templateUrl: './add-new.component.html',
+  styleUrls: ['./add-new.component.css']
 })
-export class CreateRunComponent implements OnInit {
+export class AddNewComponent implements OnInit {
   trainings: Training[];
     
   test(): void {
     this.getTrainings();
-    console.log("hello");
+    console.log("fetched trainings");
   }
   onSubmit(form:NgForm ) {
     const httpOptions = {

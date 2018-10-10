@@ -13,6 +13,7 @@ import { RunDetailComponent } from './run-detail/run-detail.component';
 import { UnfinishedRunsComponent } from './unfinished-runs/unfinished-runs.component';
 import { CreateRunComponent } from './create-run/create-run.component';
 import { CreateTrainingComponent } from './create-training/create-training.component';
+import { AddNewComponent } from './add-new/add-new.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CreateTrainingComponent } from './create-training/create-training.compo
     RunDetailComponent,
     UnfinishedRunsComponent,
     CreateRunComponent,
-    CreateTrainingComponent
+    CreateTrainingComponent,
+    AddNewComponent
   ],
   imports: [
     BrowserModule,

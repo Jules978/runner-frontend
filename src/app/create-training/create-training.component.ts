@@ -29,7 +29,8 @@ export class CreateTrainingComponent implements OnInit {
             error => {
                 console.log("Error", error);
             }
-        );    
+        ); 
+         
   }
   constructor(private trainingService: TrainingService, private http: HttpClient) { }
 

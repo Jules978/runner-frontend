@@ -1,0 +1,51 @@
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#addRun" role="tab" aria-controls="addRun" aria-selected="true" (click)="test()">Run</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="addTraining-tab" data-toggle="tab" href="#addTraining" role="tab" aria-controls="AaddTraining" aria-selected="false">Training</a>
+  </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="addRun" role="tabpanel" aria-labelledby="addRun-tab">
+      <div class="card">
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+              <div class="form-group">
+                  Name:
+                      <input class="form-control form-control-lg" placeholder="Title" id="runTitle"name="title" ngModel>
+           </div>
+          
+              <div class="form-group">
+                  Date:
+                    <input class="form-control form-control-lg"  placeholder="yyyy-mm-dd" id="runDate" name="date" ngModel>
+           </div>
+          
+              <div class="form-group">
+                  Distance:
+                      <input class="form-control form-control-lg"  placeholder="Distance" id="runDistance" name="distance" ngModel>
+             </div>
+          
+              <div class="form-group">
+             Comment:
+                      <input class="form-control form-control-lg"  placeholder="Comment" id="runComment"name="comment" ngModel>
+           </div>
+          
+              <div class="form-group">
+                 Training:
+                      <select class="form-control" name="training" ngModel id="runTraining">
+                          <option disabled selected value>Select training</option>
+                          <option *ngFor="let t of trainings" value="{{t.id}}">{{t.name}}</option>
+                      </select>
+            </div>
+              
+              <button type="submit" class="btn btn-success" >ADD THIS RUN</button>
+          
+          </form>
+          </div>
+  </div>
+  <div class="tab-pane fade" id="addTraining" role="tabpanel" aria-labelledby="addTraining-tab">
+      <app-create-training></app-create-training>
+  </div>
+</div>

@@ -7,12 +7,13 @@ import { TrainingsComponent} from './trainings/trainings.component';
 import { DashboardComponent} from './dashboard/dashboard.component';
 import { CreateRunComponent } from './create-run/create-run.component';
 import { CreateTrainingComponent} from './create-training/create-training.component';
+import { AddNewComponent } from './add-new/add-new.component';
 const routes: Routes = [
   {path: 'runs', component: RunsComponent},
   {path: 'trainings', component: TrainingsComponent},
   {path: '', component: DashboardComponent},
-  {path: 'newrun', component: CreateRunComponent},
-  {path: 'newtraining', component: CreateTrainingComponent}
+  {path: 'new', component: AddNewComponent}
+
 ];
 
 @NgModule({
