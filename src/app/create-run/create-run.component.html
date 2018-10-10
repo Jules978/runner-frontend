@@ -1,24 +1,39 @@
+<div class="card">
 <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-      
-    <label>name:
-        <input class="form-control" placeholder="Title" name="title" ngModel>
-      </label>
-      <label>Date:
-          <input class="form-control"  placeholder="yyyy-mm-dd" name="date" ngModel>
-        </label>
-  
-      <label>Distance:
-        <input class="form-control"  placeholder="Distance" name="distance" ngModel>
-      </label>
-      <label>Comment:
-          <input class="form-control"  placeholder="Comment" name="comment" ngModel>
-      </label>
+    <div class="form-group">
+        Name:
+            <input class="form-control form-control-lg" placeholder="Title" id="runTitle"name="title" ngModel>
+        
+    </div>
 
-      <label>Training:
-          <select class="form-control" name="training" ngModel>
-            <option disabled selected value>Select training</option>
-            <option *ngFor="let t of trainings" value="{{t.id}}">{{t.name}}</option>
-          </select>
-      </label>
-      <button type="submit" class="btn btn-success" >ADD THIS RUN</button>
-  </form>
+    <div class="form-group">
+        Date:
+          <input class="form-control form-control-lg"  placeholder="yyyy-mm-dd" id="runDate" name="date" ngModel>
+        
+    </div>
+
+    <div class="form-group">
+        Distance:
+            <input class="form-control form-control-lg"  placeholder="Distance" id="runDistance" name="distance" ngModel>
+        
+    </div>
+
+    <div class="form-group">
+   Comment:
+            <input class="form-control form-control-lg"  placeholder="Comment" id="runComment"name="comment" ngModel>
+
+    </div>
+
+    <div class="form-group">
+       Training:
+            <select class="form-control" name="training" ngModel id="runTraining">
+                <option disabled selected value>Select training</option>
+                <option *ngFor="let t of trainings" value="{{t.id}}">{{t.name}}</option>
+            </select>
+      
+    </div>
+    
+    <button type="submit" class="btn btn-success" >ADD THIS RUN</button>
+
+</form>
+</div>
