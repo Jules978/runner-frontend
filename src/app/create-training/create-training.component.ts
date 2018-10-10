@@ -17,7 +17,7 @@ export class CreateTrainingComponent implements OnInit {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
     
-    this.http.post("http://localhost:8080/api/run/add",
+    this.http.post("http://localhost:8080/api/training/add",
       {
         "name": form.value.name,
         "description": form.value.description,
