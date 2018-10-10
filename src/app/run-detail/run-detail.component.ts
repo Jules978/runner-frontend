@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Run } from '../run';
 import { Training } from '../training';
 import { TrainingService } from '../training.service';
+import { RunService } from '../run.service';
 
 @Component({
   selector: 'app-run-detail',
@@ -19,16 +20,14 @@ export class RunDetailComponent implements OnInit {
   getTrainings(): void {
     this.trainingService.getTrainings().subscribe(trainings => this.trainings = trainings);
   }
-  showHideEdit(): void {
-    if(this.showUpdateRun){
-      this.showUpdateRun = false;
-     
-    } else {
-      this.showUpdateRun = true;
+  showHideEdit(): void {    
       this.setEditRun(this.run);
-    }
+
   }
 
+  unfinishedCheck(finished: string): boolean{
+    if(finished == "no"){return true} else { return false}
+  }
   setEditRun(run: Run){
     this.editRun = Object.assign(new Run(), run);
   }
@@ -42,7 +41,6 @@ export class RunDetailComponent implements OnInit {
 
   ngOnInit() {
     this.getTrainings();
-    this.setEditRun(this.run);
   }
 
 }

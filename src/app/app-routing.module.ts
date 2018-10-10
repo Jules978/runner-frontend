@@ -5,15 +5,14 @@ import { CommonModule } from '@angular/common';
 import { RunsComponent } from './runs/runs.component';
 import { TrainingsComponent} from './trainings/trainings.component';
 import { DashboardComponent} from './dashboard/dashboard.component';
-import { CreateTrainingComponent } from './create-training/create-training.component';
 import { CreateRunComponent } from './create-run/create-run.component';
-
+import { CreateTrainingComponent} from './create-training/create-training.component';
 const routes: Routes = [
   {path: 'runs', component: RunsComponent},
   {path: 'trainings', component: TrainingsComponent},
   {path: '', component: DashboardComponent},
-  {path: 'addrun', component: CreateRunComponent},
-  {path: 'addtraining', component: CreateTrainingComponent}
+  {path: 'newrun', component: CreateRunComponent},
+  {path: 'newtraining', component: CreateTrainingComponent}
 ];
 
 @NgModule({

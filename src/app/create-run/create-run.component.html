@@ -1,3 +1,24 @@
-<p>
-  create-run works!
-</p>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      
+    <label>name:
+        <input class="form-control" placeholder="Title" name="title" ngModel>
+      </label>
+      <label>Date:
+          <input class="form-control"  placeholder="yyyy-mm-dd" name="date" ngModel>
+        </label>
+  
+      <label>Distance:
+        <input class="form-control"  placeholder="Distance" name="distance" ngModel>
+      </label>
+      <label>Comment:
+          <input class="form-control"  placeholder="Comment" name="comment" ngModel>
+      </label>
+
+      <label>Training:
+          <select class="form-control" name="training" ngModel>
+            <option disabled selected value>Select training</option>
+            <option *ngFor="let t of trainings" value="{{t.id}}">{{t.name}}</option>
+          </select>
+      </label>
+      <button type="submit" class="btn btn-success" >ADD THIS RUN</button>
+  </form>

@@ -60,15 +60,6 @@ export class RunService {
     );
   }
 
-  addRun(run: Run): Observable<Run> {
-    const url = 'http://localhost:8080/api/run/add'
-    const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-    };
-    return this.http.post<Run>(url, run, httpOptions).pipe(
-      catchError(this.handleError<Run>('addRun'))
-    );
-  }
 
   deleteRun(run: Run | number): Observable<Run> {
     const id = typeof run === 'number' ? run : run.id;

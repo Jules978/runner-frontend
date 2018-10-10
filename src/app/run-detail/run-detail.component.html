@@ -1,41 +1,52 @@
 <div *ngIf="run">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a (click)="showHideEdit()" class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+        </li>
+   
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="card-body">
+                <h5 class="card-title">{{run.title}}: Details</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{run.date}} - {{run.distance}} km</h6>
+                <p class="card-text" *ngIf="run.time" ><span>Time: </span>{{run.time}} min</p>
+                <p class="card-text" *ngIf="run.time" ><span>Speed: </span>{{run.avspeed}} min/km</p>
+                <p class="card-text"><span>Training: </span>{{run.training.name}}</p>
+                <p class="card-text"><span>Comment: </span>{{run.comment}}</p>
+                <button *ngIf="(unfinishedCheck(run.finished))"> I finished this run! </button>
+              </div>
+        </div>
+        <div *ngIf="editRun" class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
+            <label>name:
+                <input [(ngModel)]="editRun.title" placeholder="new title" value="{{editRun.title}}"/>
+              </label>
+              <br>
+              <label>distance:
+                <input [(ngModel)]="editRun.distance" placeholder="new distance" value="{{editRun.distance}}"/>
+              </label>
+              <br>
+              <label>time:
+                <input [(ngModel)]="editRun.time" placeholder="new time" value="{{editRun.time}}"/>
+              </label>
+                <br>
+              <label>comment:
+                <input [(ngModel)]="editRun.comment" placeholder="new comment" value="{{editRun.comment}}"/>
+              </label>
+              <br>
+              <label>training:
+                  <select [(ngModel)]="editRun.training">
+                    <option *ngFor="let t of trainings" [ngValue]="t">{{t.name}}</option>
+                  </select>
+                </label>
+              <button (click)="updateRun(editRun)"> test update</button>
+        </div>
+        
+      </div>
 
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">{{run.title}}: Details</h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{run.date}} - {{run.distance}} km</h6>
-      <p class="card-text" *ngIf="run.time" ><span>Time: </span>{{run.time}} min</p>
-      <p class="card-text" *ngIf="run.time" ><span>Speed: </span>{{run.avspeed}} min/km</p>
-      <p class="card-text"><span>Training: </span>{{run.training.name}}</p>
-      <p class="card-text"><span>Comment: </span>{{run.comment}}</p>
-      <button (click)="showHideEdit()" class="btn btn-primary">{{editButton}}</button>
-     
-    </div>
-  </div>
-
-  <div *ngIf="showUpdateRun">
-    <label>name:
-      <input [(ngModel)]="editRun.title" placeholder="new title" value="{{editRun.title}}"/>
-    </label>
-    <br>
-    <label>distance:
-      <input [(ngModel)]="editRun.distance" placeholder="new distance" value="{{editRun.distance}}"/>
-    </label>
-    <br>
-    <label>time:
-      <input [(ngModel)]="editRun.time" placeholder="new time" value="{{editRun.time}}"/>
-    </label>
-      <br>
-    <label>comment:
-      <input [(ngModel)]="editRun.comment" placeholder="new comment" value="{{editRun.comment}}"/>
-    </label>
-    <br>
-    <label>training:
-        <select [(ngModel)]="editRun.training">
-          <option *ngFor="let t of trainings" [ngValue]="t">{{t.name}}</option>
-        </select>
-      </label>
-    <button (click)="updateRun(editRun)"> test update</button>
-  </div>
+ 
 
 </div>

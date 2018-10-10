@@ -1,3 +1,14 @@
-<p>
-  create-training works!
-</p>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <label>Name:
+        <input class="form-control" placeholder="sub 3 hour marathon" name="name" ngModel>
+      </label>
+      <label>Description:
+          <input class="form-control"  name="description" ngModel>
+        </label>
+  
+      <label>type:
+        <input class="form-control"  placeholder="Speed improvement" name="type" ngModel>
+      </label>
+      
+      <button type="submit" class="btn btn-success" >ADD THIS RUN</button>
+  </form>
