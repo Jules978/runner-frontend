@@ -13,6 +13,8 @@ export class TrainingDetailComponent implements OnInit {
   deleteTraining(training: Training): void {
 
     this.trainingService.deleteTraining(training);
+    this.training = null;
+    
   }
 
   updateTraining(training: Training): void {
@@ -22,6 +24,7 @@ export class TrainingDetailComponent implements OnInit {
   constructor(private trainingService: TrainingService) { }
 
   ngOnInit() {
+    console.log(this.training)
   }
 
 }

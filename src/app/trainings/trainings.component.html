@@ -1,21 +1,21 @@
-<h2>TRAININGS</h2>
-
-
-<div class=.container-fluid>
-    <div class="row">
-      <div class="col-lg">
-        <app-training-detail [training]="selectedTraining" ></app-training-detail>
-      </div>
-  
-      <div class="col-3">
-        <ul class="trainings">
-          <li *ngFor="let training of trainings" [class.selected]="training === selectedTraining"
-          (click)="onSelect(training)">
-            <span class="badge">{{training.type}}</span> {{training.name}}
-          </li>
-        </ul>
-      </div>
-     
+<div class="container-fluid" id="main">
+  <h1 id="title">All Training</h1>
+  <div class="row" id="contentContainer">
+    <div class="col-lg">
+      <app-training-detail [training]="selectedTraining"></app-training-detail>
     </div>
+
+    <div class="col col-lg-3" id="listContainer">
+      <ul class="runs" class="list-group list-group-flush">
+        <li *ngFor="let training of trainings" [class.selected]="training === selectedTraining" (click)="onSelect(training)"
+          class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{training.name}}</h5>
+            <small class="text-muted">{{training.type}}</small>
+          </div>
+        </li>
+      </ul>
+    </div>
+
   </div>
-  
+</div>
