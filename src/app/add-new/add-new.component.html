@@ -1,7 +1,7 @@
 
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#addRun" role="tab" aria-controls="addRun" aria-selected="true" (click)="test()">Run</a>
+<ul class="nav nav-pills" id="myTab" role="tablist">
+  <li class="nav-item active" id="navlink">
+    <a class="nav-link" id="addRun-tab" data-toggle="tab" href="#addRun" role="tab" aria-controls="addRun" aria-selected="true" (click)="test()">Run</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" id="addTraining-tab" data-toggle="tab" href="#addTraining" role="tab" aria-controls="AaddTraining" aria-selected="false">Training</a>
@@ -14,22 +14,22 @@
           <form (ngSubmit)="onSubmit(f)" #f="ngForm">
               <div class="form-group">
                   Name:
-                      <input class="form-control form-control-lg" placeholder="Title" id="runTitle"name="title" ngModel>
+                      <input type="text" class="form-control form-control-lg" placeholder="Title" id="runTitle"name="title" ngModel required>
            </div>
           
               <div class="form-group">
                   Date:
-                    <input class="form-control form-control-lg"  placeholder="yyyy-mm-dd" id="runDate" name="date" ngModel>
+                    <input type="date" class="form-control form-control-lg"  placeholder="yyyy-mm-dd" id="runDate" name="date" ngModel required>
            </div>
           
               <div class="form-group">
                   Distance:
-                      <input class="form-control form-control-lg"  placeholder="Distance" id="runDistance" name="distance" ngModel>
+                      <input type="number"class="form-control form-control-lg"  placeholder="Distance" id="runDistance" name="distance" ngModel required>
              </div>
           
               <div class="form-group">
              Comment:
-                      <input class="form-control form-control-lg"  placeholder="Comment" id="runComment"name="comment" ngModel>
+                      <input type="text" class="form-control form-control-lg"  placeholder="Comment" id="runComment"name="comment" ngModel>
            </div>
           
               <div class="form-group">

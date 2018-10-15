@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { NgForm } from '@angular/forms';   
 import { Run } from '../run';
 import { Training } from '../training';
 import { TrainingService } from '../training.service';
@@ -35,9 +38,22 @@ export class RunDetailComponent implements OnInit {
   updateRun(editedRun: Run): void {
     console.log(editedRun);
     this.run = Object.assign(new Run(), this.editRun);
-  
+    this.runService.updateRun(this.run);
   }
-  constructor(private trainingService: TrainingService) { }
+
+  finishRun(run: Run): void {
+    
+    this.runService.finishRun(run);
+    run.finished="yes";
+ 
+  }
+
+  deleteRun(run: Run): void {
+
+    this.runService.deleteRun(run);
+    this.run = null;
+  }
+  constructor(private trainingService: TrainingService, private runService: RunService, private http: HttpClient) { }
 
   ngOnInit() {
     this.getTrainings();

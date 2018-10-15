@@ -21,34 +21,39 @@ export class TrainingService {
     );
   }
 
-  addRun(training: Training): Observable<Training> {
-    const url = '{this.baseTrainingUrl}/add'
+   updateTraining(training: Training): void {
+   
+    const url = 'http://localhost:8080/api/training/update/'+ training.id;
+   
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
-    return this.http.post<Training>(url, training, httpOptions).pipe(
-      catchError(this.handleError<Training>('addTraining'))
-    );
-  }
-  updateRun(training: Training): Observable<any> {
-    const url = '{this.baseTrainingUrl}/update/${training.id}'
-    const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-    };
-    return this.http.put(url, training, httpOptions).pipe(catchError(this.handleError<any>('updateTraining'))
-    );
+    
+    this.http.put(url,
+      training).subscribe(
+            data => {
+                console.log("PUT Request is successful ", data);
+            },
+            error => {
+                console.log("Error", error);
+            }
+        ); 
+      
   }
 
-  deleteRun(training: Training | number): Observable<Training> {
-    const id = typeof training === 'number' ? training : training.id;
-    const url = '{this.baseTrainingUrl}/delete/${id}'
+  deleteTraining(training: Training): void{
+    const url = 'http://localhost:8080/api/training/delete/' + training.id;
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-    };
-
-    return this.http.delete<Training>(url, httpOptions).pipe(
-      catchError(this.handleError<Training>('deleteTraining'))
-    );
+    };        
+    this.http.delete(url).subscribe(
+            data => {
+                console.log("DELETE Request is successful ", data);
+            },
+            error => {
+                console.log("Error", error);
+            }
+        ); 
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

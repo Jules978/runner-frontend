@@ -42,35 +42,60 @@ export class RunService {
     );
   }
 
-  updateRun(run: Run): Observable<any> {
-    const url = 'http://localhost:8080/api/run/${run.id}'
+  updateRun(run: Run): void {
+   
+    const url = 'http://localhost:8080/api/run/update/'+ run.id;
+   
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
-    return this.http.put(url, run, httpOptions).pipe(catchError(this.handleError<any>('updateTraining'))
-    );
+    
+    this.http.put(url,
+      run).subscribe(
+            data => {
+                console.log("PUT Request is successful ", data);
+            },
+            error => {
+                console.log("Error", error);
+            }
+        ); 
+      
   }
 
-  finishRun(run: Run): Observable<any> {
-    const url = 'http://localhost:8080/api/run/finishrun/${training.id}'
+  finishRun(run: Run): void {
+   
+    const url = 'http://localhost:8080/api/run/finishrun/'+ run.id;
+   
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
-    return this.http.put(url, run, httpOptions).pipe(catchError(this.handleError<any>('updateTraining'))
-    );
+    
+    this.http.put(url,
+      run).subscribe(
+            data => {
+                console.log("PUT Request is successful ", data);
+            },
+            error => {
+                console.log("Error", error);
+            }
+        ); 
+      
   }
 
 
-  deleteRun(run: Run | number): Observable<Run> {
-    const id = typeof run === 'number' ? run : run.id;
-    const url = 'http://localhost:8080/api/run/delete/${id}'
+  deleteRun(run: Run): void{
+    const url = 'http://localhost:8080/api/run/delete/' + run.id;
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-    };
-
-    return this.http.delete<Run>(url, httpOptions).pipe(
-      catchError(this.handleError<Run>('deleteTraining'))
-    );
+    };        
+    this.http.delete(url).subscribe(
+            data => {
+                console.log("DELETE Request is successful ", data);
+            },
+            error => {
+                console.log("Error", error);
+            }
+        ); 
   }
 
   getTrainings(): Observable<Training[]> {

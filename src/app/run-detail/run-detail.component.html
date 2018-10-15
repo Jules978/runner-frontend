@@ -6,6 +6,9 @@
         <li class="nav-item">
           <a (click)="showHideEdit()" class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="profile" aria-selected="false">Edit</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" id="delete-tab" data-toggle="tab" href="#delete" role="tab" aria-controls="delete" aria-selected="false">Delete</a>
+          </li>
    
       </ul>
       <div class="tab-content" id="myTabContent">
@@ -17,7 +20,27 @@
                 <p class="card-text" *ngIf="run.time" ><span>Speed: </span>{{run.avspeed}} min/km</p>
                 <p class="card-text"><span>Training: </span>{{run.training.name}}</p>
                 <p class="card-text"><span>Comment: </span>{{run.comment}}</p>
-                <button *ngIf="(unfinishedCheck(run.finished))"> I finished this run! </button>
+                <div class="card-text" *ngIf="(unfinishedCheck(run.finished))">
+                  <p> finished the run?</p>
+                  <label>Distance:
+                      <input type="number" [(ngModel)]="run.distance" placeholder="distance" value="{{run.distance}}"/>
+                    </label>
+                    <br>
+                    <label>Time:
+                      <input type="number" [(ngModel)]="run.time" placeholder="time" value="{{run.time}}"/>
+                    </label>
+                      <br>
+                      <label>Score:
+                          <input type="number" [(ngModel)]="run.score" placeholder="how did it go?" value="{{run.score}}"/>
+                        </label>
+                          <br>
+                      <label>comment:
+                          <input type="text" [(ngModel)]="run.comment" placeholder="comment" value="{{run.comment}}"/>
+                        </label>
+                          <br>
+                  <button (click)="finishRun(run)"> I finished this run! </button>
+                </div>
+                
               </div>
         </div>
         <div *ngIf="editRun" class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
@@ -43,6 +66,17 @@
                   </select>
                 </label>
               <button (click)="updateRun(editRun)"> test update</button>
+        </div>
+        <div class="tab-pane fade" id="delete" role="tabpanel" aria-labelledby="delete-tab">
+          <div class="card">
+              <h5 class="card-title">Are you sure you want to delete {{run.title}}?</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{run.date}} - {{run.distance}} km</h6>
+              <p class="card-text" *ngIf="run.time" ><span>Time: </span>{{run.time}} min</p>
+              <p class="card-text" *ngIf="run.time" ><span>Speed: </span>{{run.avspeed}} min/km</p>
+              <p class="card-text"><span>Training: </span>{{run.training.name}}</p>
+              <p class="card-text"><span>Comment: </span>{{run.comment}}</p>
+              <button (click)="deleteRun(run)">YES, remove this run!</button>
+          </div>
         </div>
         
       </div>
