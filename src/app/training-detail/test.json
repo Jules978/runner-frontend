@@ -1,0 +1,562 @@
+[
+    {
+        "localEventId": 1,
+        "languageId": 2,
+        "eventId": 1,
+        "startDateTime": "2018-04-10T13:00:00.000+0000",
+        "expirationDateTime": null,
+        "publishDateTime": null,
+        "localOrganizer": null,
+        "locationId": 1,
+        "localStatus": "PUBLISH",
+        "maxSessions": 5,
+        "template": "default",
+        "bannerPath": "/images/Events/Event_1/LocalEvent_1/std.png",
+        "signOnLinkExternal": null,
+        "localEventLanguageMap": {
+            "1": {
+                "localEventLanguageId": {
+                    "languageId": 1,
+                    "localEventId": 1
+                },
+                "localEventId": 1,
+                "languageId": 1,
+                "name": "Innovatos Plaza Groningen 2018",
+                "description": "Our yearly, innovative, networkevent for our colleagues, customers and business partners. This years' theme is 'Future of Work'. We will show projects, demo's, experiences and if you're up to it, you can also join one of our workshops!",
+                "afternoteLong": "",
+                "afternoteShort": "",
+                "routePdfPath": ""
+            },
+            "2": {
+                "localEventLanguageId": {
+                    "languageId": 2,
+                    "localEventId": 1
+                },
+                "localEventId": 1,
+                "languageId": 2,
+                "name": "Innovatos Plaza Groningen 2018",
+                "description": "Our yearly, innovative, networkevent for our colleagues, customers and business partners. This years' theme is 'Future of Work'. We will show projects, demo's, experiences and if you're up to it, you can also join one of our workshops!",
+                "afternoteLong": "",
+                "afternoteShort": null,
+                "routePdfPath": null
+            }
+        },
+        "location": {
+            "locationId": 1,
+            "locationName": "Atos Groningen",
+            "address": "Eemsgolaan 5",
+            "town": "Groningen",
+            "zipCode": "9727 DW",
+            "country": "Nederland",
+            "picture": null,
+            "longitude": null,
+            "lattitude": null,
+            "locationLanguageMap": {
+                "2": {
+                    "locationLanguageId": {
+                        "languageId": 2,
+                        "locationId": 1
+                    },
+                    "locationId": 1,
+                    "languageId": 2,
+                    "caption": null,
+                    "locationName": "Atos Groningen"
+                }
+            }
+        },
+        "event": {
+            "eventId": 1,
+            "languageId": 1,
+            "eventContact": null,
+            "eventOrganizer": null,
+            "impressionMediaLink": null,
+            "mediaType": null,
+            "impression_media_blob": null,
+            "eventLanguageMap": {
+                "1": {
+                    "eventLanguageId": {
+                    "languageId": 1,
+                    "eventId": 1
+                },
+                "eventId": 1,
+                "languageId": 1,
+                "name": "Innovatos Plaza 2018",
+                "description": "Our yearly, innovative, networkevent for our colleagues, customers and business partners. This years' theme is 'Future of Work'. We will show projects, demo's, experiences and if you're up to it, you can also join one of our workshops!"
+                },
+                "2": {
+                    "eventLanguageId": {
+                        "languageId": 2,
+                        "eventId": 1
+                    },
+                    "eventId": 1,
+                    "languageId": 2,
+                    "name": "Innovatos Plaza 2018",
+                    "description": "Our yearly, innovative, networkevent for our colleagues, customers and business partners. This years' theme is 'Future of Work'. We will show projects, demo's, experiences and if you're up to it, you can also join one of our workshops! "
+                }
+            },
+        "themes": [
+            {
+                "themeId": 5,
+                "themeImagePath": "/images/Events/Event_1/Theme_5/OT.png",
+                "eventId": 1,
+                "themeLanguageMap": {
+                    "1": {
+                        "themeLanguageId": {
+                            "languageId": 1,
+                            "themeId": 5
+                        },
+                        "themeId": 5,
+                        "languageId": 1,
+                        "title": "Other (Technologies)",
+                        "description": null
+                    },
+                    "2": {
+                        "themeLanguageId": {
+                            "languageId": 2,
+                            "themeId": 5
+                        },
+                        "themeId": 5,
+                        "languageId": 2,
+                        "title": "Other (Technologies) ",
+                        "description": null
+                    }
+                },
+                "themeTitle": "Other (Technologies) ",
+                "themeDescription": null
+            },
+            {
+                "themeId": 1,
+                "themeImagePath": "/images/Events/Event_1/Theme_1/Codex.png",
+                "eventId": 1,
+                "themeLanguageMap": {
+                    "1": {
+                        "themeLanguageId": {
+                            "languageId": 1,
+                            "themeId": 1
+                        },
+                        "themeId": 1,
+                        "languageId": 1,
+                        "title": "Codex",
+                        "description": null
+                    },
+                    "2": {
+                        "themeLanguageId": {
+                            "languageId": 2,
+                            "themeId": 1
+                        },
+                        "themeId": 1,
+                        "languageId": 2,
+                        "title": "Codex ",
+                        "description": null
+                    }
+                },
+                "themeTitle": "Codex ",
+                "themeDescription": null
+            },
+            {
+                "themeId": 2,
+                "themeImagePath": "/images/Events/Event_1/Theme_2/DW.png",
+                "eventId": 1,
+                "themeLanguageMap": {
+                    "1": {
+                        "themeLanguageId": {
+                            "languageId": 1,
+                            "themeId": 2
+                        },
+                        "themeId": 2,
+                        "languageId": 1,
+                        "title": "Digital Workplace",
+                        "description": null
+                     },
+                    "2": {
+                        "themeLanguageId": {
+                            "languageId": 2,
+                            "themeId": 2
+                        },
+                        "themeId": 2,
+                        "languageId": 2,
+                        "title": "Digital Workplace ",
+                        "description": null
+                    }
+                },
+                "themeTitle": "Digital Workplace ",
+                "themeDescription": null
+            },
+            {
+                "themeId": 3,
+                "themeImagePath": "/images/Events/Event_1/Theme_3/SAPHANA.png",
+                "eventId": 1,
+                "themeLanguageMap": {
+                    "1": {
+                        "themeLanguageId": {
+                            "languageId": 1,
+                            "themeId": 3
+                        },
+                        "themeId": 3,
+                        "languageId": 1,
+                        "title": "SAP HANA",
+                        "description": null
+                    },
+                    "2": {
+                        "themeLanguageId": {
+                            "languageId": 2,
+                            "themeId": 3
+                        },
+                        "themeId": 3,
+                        "languageId": 2,
+                        "title": "SAP HANA ",
+                        "description": null
+                    }
+                },
+                "themeTitle": "SAP HANA ",
+                "themeDescription": null
+            },
+            {
+                "themeId": 4,
+                "themeImagePath": "/images/Events/Event_1/Theme_4/HC.png",
+                "eventId": 1,
+                    "themeLanguageMap": {
+                        "1": {
+                            "themeLanguageId": {
+                                "languageId": 1,
+                                "themeId": 4
+                            },
+                            "themeId": 4,
+                            "languageId": 1,
+                            "title": "Hybrid Cloud",
+                            "description": ""
+                        },
+                        "2": {
+                            "themeLanguageId": {
+                                "languageId": 2,
+                                "themeId": 4
+                            },
+                            "themeId": 4,
+                            "languageId": 2,
+                            "title": "Hybrid Cloud ",
+                            "description": null
+                        }
+                    },
+                    "themeTitle": "Hybrid Cloud ",
+                    "themeDescription": null
+            }
+        ],
+    "eventName": "Innovatos Plaza 2018",
+    "description": "Our yearly, innovative, networkevent for our colleagues, customers and business partners. This years' theme is 'Future of Work'. We will show projects, demo's, experiences and if you're up to it, you can also join one of our workshops!",
+    "name": "Innovatos Plaza 2018"
+    },
+    "partners": [],
+    "targets": [],
+    "contacts": [
+    {
+    "contactId": 5,
+    "localEventId": 1,
+    "contactName": "Jeannette Ramaker",
+    "email": "jeannette.ramaker@atos.net",
+    "phone": "+31622908537"
+    }
+    ],
+    "localEventName": "Innovatos Plaza Groningen 2018",
+    "endDateTime": "2018-04-10T15:00:00.000+0000"
+    },
+    {
+    "localEventId": 2,
+    "languageId": 2,
+    "eventId": 1,
+    "startDateTime": "2018-03-20T15:00:00.000+0000",
+    "expirationDateTime": null,
+    "publishDateTime": null,
+    "localOrganizer": null,
+    "locationId": 2,
+    "localStatus": "PUBLISH",
+    "maxSessions": 5,
+    "template": "default",
+    "bannerPath": "/images/Events/Event_1/LocalEvent_2/std.png",
+    "signOnLinkExternal": null,
+    "localEventLanguageMap": {
+    "1": {
+    "localEventLanguageId": {
+    "languageId": 1,
+    "localEventId": 2
+    },
+    "localEventId": 2,
+    "languageId": 1,
+    "name": "Innovatos Plaza Amstelveen 2018",
+    "description": "Our yearly, innovative, networkevent for our colleagues, customers and business partners. This years' theme is 'Future of Work'. We will show projects, demo's, experiences and if you're up to it, you can also join one of our workshops!",
+    "afternoteLong": null,
+    "afternoteShort": null,
+    "routePdfPath": null
+    },
+    "2": {
+    "localEventLanguageId": {
+    "languageId": 2,
+    "localEventId": 2
+    },
+    "localEventId": 2,
+    "languageId": 2,
+    "name": "Innovatos Plaza Amstelveen 2018",
+    "description": "Our yearly, innovative, networkevent for our colleagues, customers and business partners. This years' theme is 'Future of Work'. We will show projects, demo's, experiences and if you're up to it, you can also join one of our workshops!",
+    "afternoteLong": null,
+    "afternoteShort": null,
+    "routePdfPath": null
+    }
+    },
+    "location": {
+    "locationId": 2,
+    "locationName": "Atos Amstelveen",
+    "address": "Burgemeester Rijnderslaan 30",
+    "town": "Amstelveen",
+    "zipCode": "1185 MC",
+    "country": "Nederland",
+    "picture": null,
+    "longitude": null,
+    "lattitude": null,
+    "locationLanguageMap": {
+    "2": {
+    "locationLanguageId": {
+    "languageId": 2,
+    "locationId": 2
+    },
+    "locationId": 2,
+    "languageId": 2,
+    "caption": null,
+    "locationName": "Atos Amstelveen"
+    }
+    }
+    },
+    "event": {
+    "eventId": 1,
+    "languageId": 1,
+    "eventContact": null,
+    "eventOrganizer": null,
+    "impressionMediaLink": null,
+    "mediaType": null,
+    "impression_media_blob": null,
+    "eventLanguageMap": {
+    "1": {
+    "eventLanguageId": {
+    "languageId": 1,
+    "eventId": 1
+    },
+    "eventId": 1,
+    "languageId": 1,
+    "name": "Innovatos Plaza 2018",
+    "description": "Our yearly, innovative, networkevent for our colleagues, customers and business partners. This years' theme is 'Future of Work'. We will show projects, demo's, experiences and if you're up to it, you can also join one of our workshops!"
+    },
+    "2": {
+    "eventLanguageId": {
+    "languageId": 2,
+    "eventId": 1
+    },
+    "eventId": 1,
+    "languageId": 2,
+    "name": "Innovatos Plaza 2018",
+    "description": "Our yearly, innovative, networkevent for our colleagues, customers and business partners. This years' theme is 'Future of Work'. We will show projects, demo's, experiences and if you're up to it, you can also join one of our workshops! "
+    }
+    },
+    "themes": [
+    {
+    "themeId": 5,
+    "themeImagePath": "/images/Events/Event_1/Theme_5/OT.png",
+    "eventId": 1,
+    "themeLanguageMap": {
+    "1": {
+    "themeLanguageId": {
+    "languageId": 1,
+    "themeId": 5
+    },
+    "themeId": 5,
+    "languageId": 1,
+    "title": "Other (Technologies)",
+    "description": null
+    },
+    "2": {
+    "themeLanguageId": {
+    "languageId": 2,
+    "themeId": 5
+    },
+    "themeId": 5,
+    "languageId": 2,
+    "title": "Other (Technologies) ",
+    "description": null
+    }
+    },
+    "themeTitle": "Other (Technologies) ",
+    "themeDescription": null
+    },
+    {
+    "themeId": 1,
+    "themeImagePath": "/images/Events/Event_1/Theme_1/Codex.png",
+    "eventId": 1,
+    "themeLanguageMap": {
+    "1": {
+    "themeLanguageId": {
+    "languageId": 1,
+    "themeId": 1
+    },
+    "themeId": 1,
+    "languageId": 1,
+    "title": "Codex",
+    "description": null
+    },
+    "2": {
+    "themeLanguageId": {
+    "languageId": 2,
+    "themeId": 1
+    },
+    "themeId": 1,
+    "languageId": 2,
+    "title": "Codex ",
+    "description": null
+    }
+    },
+    "themeTitle": "Codex ",
+    "themeDescription": null
+    },
+    {
+    "themeId": 2,
+    "themeImagePath": "/images/Events/Event_1/Theme_2/DW.png",
+    "eventId": 1,
+    "themeLanguageMap": {
+    "1": {
+    "themeLanguageId": {
+    "languageId": 1,
+    "themeId": 2
+    },
+    "themeId": 2,
+    "languageId": 1,
+    "title": "Digital Workplace",
+    "description": null
+    },
+    "2": {
+    "themeLanguageId": {
+    "languageId": 2,
+    "themeId": 2
+    },
+    "themeId": 2,
+    "languageId": 2,
+    "title": "Digital Workplace ",
+    "description": null
+    }
+    },
+    "themeTitle": "Digital Workplace ",
+    "themeDescription": null
+    },
+    {
+    "themeId": 3,
+    "themeImagePath": "/images/Events/Event_1/Theme_3/SAPHANA.png",
+    "eventId": 1,
+    "themeLanguageMap": {
+    "1": {
+    "themeLanguageId": {
+    "languageId": 1,
+    "themeId": 3
+    },
+    "themeId": 3,
+    "languageId": 1,
+    "title": "SAP HANA",
+    "description": null
+    },
+    "2": {
+    "themeLanguageId": {
+    "languageId": 2,
+    "themeId": 3
+    },
+    "themeId": 3,
+    "languageId": 2,
+    "title": "SAP HANA ",
+    "description": null
+    }
+    },
+    "themeTitle": "SAP HANA ",
+    "themeDescription": null
+    },
+    {
+    "themeId": 4,
+    "themeImagePath": "/images/Events/Event_1/Theme_4/HC.png",
+    "eventId": 1,
+    "themeLanguageMap": {
+    "1": {
+    "themeLanguageId": {
+    "languageId": 1,
+    "themeId": 4
+    },
+    "themeId": 4,
+    "languageId": 1,
+    "title": "Hybrid Cloud",
+    "description": ""
+    },
+    "2": {
+    "themeLanguageId": {
+    "languageId": 2,
+    "themeId": 4
+    },
+    "themeId": 4,
+    "languageId": 2,
+    "title": "Hybrid Cloud ",
+    "description": null
+    }
+    },
+    "themeTitle": "Hybrid Cloud ",
+    "themeDescription": null
+    }
+    ],
+    "eventName": "Innovatos Plaza 2018",
+    "description": "Our yearly, innovative, networkevent for our colleagues, customers and business partners. This years' theme is 'Future of Work'. We will show projects, demo's, experiences and if you're up to it, you can also join one of our workshops!",
+    "name": "Innovatos Plaza 2018"
+    },
+    "partners": [],
+    "targets": [
+    {
+    "targetId": 1,
+    "template": "relation",
+    "targetLanguage": {
+    "1": {
+    "targetId": 1,
+    "languageId": 1,
+    "name": "Relations"
+    },
+    "2": {
+    "targetId": 1,
+    "languageId": 2,
+    "name": "Relaties"
+    }
+    }
+    },
+    {
+    "targetId": 2,
+    "template": "employee",
+    "targetLanguage": {
+    "1": {
+    "targetId": 2,
+    "languageId": 1,
+    "name": "Employees"
+    },
+    "2": {
+    "targetId": 2,
+    "languageId": 2,
+    "name": "Medewerkers"
+    }
+    }
+    }
+    ],
+    "contacts": [
+    {
+    "contactId": 3,
+    "localEventId": 2,
+    "contactName": "Ingrid Goossen (local)",
+    "email": "Ingrid.Goossen@atos.net",
+    "phone": "+31653862353"
+    },
+    {
+    "contactId": 4,
+    "localEventId": 2,
+    "contactName": "Stefanie Terkers (general)",
+    "email": "Stefanie.Terkers@atos.net",
+    "phone": "+31630527667"
+    }
+    ],
+    "localEventName": "Innovatos Plaza Amstelveen 2018",
+    "endDateTime": "2018-03-20T17:00:00.000+0000"
+    }
+]

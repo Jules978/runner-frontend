@@ -30,7 +30,7 @@ export class CreateTrainingComponent implements OnInit {
                 console.log("Error", error);
             }
         ); 
-         
+        form.reset();  
   }
   constructor(private trainingService: TrainingService, private http: HttpClient) { }
 

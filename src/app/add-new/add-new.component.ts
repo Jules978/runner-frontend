@@ -47,7 +47,8 @@ export class AddNewComponent implements OnInit {
             error => {
                 console.log("Error", error);
             }
-        );    
+        );
+        form.reset();   
   }
   getTrainings(): void {
     this.trainingService.getTrainings().subscribe(trainings => this.trainings = trainings);
