@@ -17,4 +17,14 @@
 #listContainer {
     padding: 0px;
 }
+h1 {
+    color: #0c5460;
+}
 
+.list-group{
+    border-radius: 0rem;
+}
+
+.list-group-item {
+    border-radius: 0rem;
+}

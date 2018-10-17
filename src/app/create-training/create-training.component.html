@@ -1,14 +1,24 @@
 <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-    <label>Name:
+  <h3>Add a new training!</h3>
+  <hr>
+    <div class="form-group">
+    Name:
         <input type="text" class="form-control" placeholder="sub 3 hour marathon" name="name" ngModel>
-      </label>
-      <label>Description:
+      
+    </div>
+
+      <div class="form-group">
+      Description:
           <input type="text" class="form-control"  name="description" ngModel>
-        </label>
-  
-      <label>type:
+        
+
+      </div>
+
+  <div class="form-group">
+      type:
         <input type="text" class="form-control"  placeholder="Speed improvement" name="type" ngModel>
-      </label>
+      
+      </div>
       
       <button type="submit" class="btn btn-success" >Add training</button>
   </form>

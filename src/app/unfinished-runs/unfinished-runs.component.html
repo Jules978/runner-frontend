@@ -6,7 +6,7 @@
     </div>
 
     <div class="col-3">
-      <ul class="runs">
+      <ul class="list-group">
         <li *ngFor="let run of runs" [class.selected]="run === selectedRun"
         (click)="onSelect(run)">
           
