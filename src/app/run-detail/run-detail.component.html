@@ -1,6 +1,7 @@
-<div *ngIf="run">
+<div *ngIf="run" class="container">
     <h5 class="card-title">{{run.title}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{run.date}} - {{run.distance}} km</h6>
+    <div class="card">
     <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
         <li class="nav-item">
           <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Details</a>
@@ -81,7 +82,7 @@
         </div>
         
       </div>
-
+    </div>
  
 
 </div>

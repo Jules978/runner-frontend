@@ -1,11 +1,10 @@
-<div *ngIf="training">
+<div *ngIf="training" class="container-fluid">
 
     <h2 id="{{training.name}}">{{training.name}} - {{training.type}} : Details</h2>
-    <div><span>Description: </span>{{training.description}}</div>
   
   </div>
 
-  <div *ngIf="training">
+  <div  class="card">
       <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
