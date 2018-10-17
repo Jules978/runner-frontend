@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Run } from '../run';
-import { RUNS} from '../mock-runs';
 import { RunService } from '../run.service';
 
 @Component({
@@ -16,7 +15,9 @@ export class RunsComponent implements OnInit {
     this.selectedRun = run;
   }
   
+  
   getRuns(): void {
+    
     this.runService.getRuns().subscribe(runs => this.runs = runs);
 
   }

@@ -1,10 +1,12 @@
 <div *ngIf="run">
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <h5 class="card-title">{{run.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{run.date}} - {{run.distance}} km</h6>
+    <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Details</a>
         </li>
         <li class="nav-item">
-          <a (click)="showHideEdit()" class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="profile" aria-selected="false">Edit</a>
+          <a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="profile" aria-selected="false">Edit</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" id="delete-tab" data-toggle="tab" href="#delete" role="tab" aria-controls="delete" aria-selected="false">Delete</a>
@@ -14,8 +16,7 @@
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="card-body">
-                <h5 class="card-title">{{run.title}}: Details</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{{run.date}} - {{run.distance}} km</h6>
+                
                 <p class="card-text" *ngIf="run.time" ><span>Time: </span>{{run.time}} min</p>
                 <p class="card-text" *ngIf="run.time" ><span>Speed: </span>{{run.avspeed}} min/km</p>
                 <p class="card-text"><span>Training: </span>{{run.training.name}}</p>
@@ -43,29 +44,29 @@
                 
               </div>
         </div>
-        <div *ngIf="editRun" class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
+        <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
             <label>name:
-                <input [(ngModel)]="editRun.title" placeholder="new title" value="{{editRun.title}}"/>
+                <input [(ngModel)]="run.title" placeholder="new title" value="{{run.title}}"/>
               </label>
               <br>
               <label>distance:
-                <input [(ngModel)]="editRun.distance" placeholder="new distance" value="{{editRun.distance}}"/>
+                <input [(ngModel)]="run.distance" placeholder="new distance" value="{{run.distance}}"/>
               </label>
               <br>
               <label>time:
-                <input [(ngModel)]="editRun.time" placeholder="new time" value="{{editRun.time}}"/>
+                <input [(ngModel)]="run.time" placeholder="new time" value="{{run.time}}"/>
               </label>
                 <br>
               <label>comment:
-                <input [(ngModel)]="editRun.comment" placeholder="new comment" value="{{editRun.comment}}"/>
+                <input [(ngModel)]="run.comment" placeholder="new comment" value="{{run.comment}}"/>
               </label>
               <br>
               <label>training:
-                  <select [(ngModel)]="editRun.training">
+                  <select [(ngModel)]="run.training">
                     <option *ngFor="let t of trainings" [ngValue]="t">{{t.name}}</option>
                   </select>
                 </label>
-              <button (click)="updateRun(editRun)"> test update</button>
+              <button (click)="updateRun(run)"> test update</button>
         </div>
         <div class="tab-pane fade" id="delete" role="tabpanel" aria-labelledby="delete-tab">
           <div class="card">

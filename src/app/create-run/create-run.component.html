@@ -34,8 +34,7 @@
             
                 <div class="form-group">
                    Training:
-                        <select class="form-control" name="training" ngModel id="runTraining">
-                            <option disabled selected value>Select training</option>
+                        <select class="form-control" name="training" ngModel id="runTraining" required>
                             <option *ngFor="let t of trainings" value="{{t.id}}">{{t.name}}</option>
                         </select>
               </div>

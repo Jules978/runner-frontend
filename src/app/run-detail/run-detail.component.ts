@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { NgForm } from '@angular/forms';   
@@ -6,6 +6,7 @@ import { Run } from '../run';
 import { Training } from '../training';
 import { TrainingService } from '../training.service';
 import { RunService } from '../run.service';
+import { componentRefresh } from '@angular/core/src/render3/instructions';
 
 @Component({
   selector: 'app-run-detail',
@@ -14,46 +15,40 @@ import { RunService } from '../run.service';
 })
 export class RunDetailComponent implements OnInit {
   @Input() run: Run;
-  editRun: Run;
   selectedTraining: Training;
   trainings: Training[];
   showUpdateRun: boolean = false;
-  editButton: string = "edit run";
-
+  
   getTrainings(): void {
     this.trainingService.getTrainings().subscribe(trainings => this.trainings = trainings);
   }
-  showHideEdit(): void {    
-      this.setEditRun(this.run);
-
-  }
+ 
 
   unfinishedCheck(finished: string): boolean{
     if(finished == "no"){return true} else { return false}
   }
-  setEditRun(run: Run){
-    this.editRun = Object.assign(new Run(), run);
-  }
 
-  updateRun(editedRun: Run): void {
-    console.log(editedRun);
-    this.run = Object.assign(new Run(), this.editRun);
-    this.runService.updateRun(this.run);
+  updateRun(run: Run): void {
+    console.log(run);
+    this.runService.updateRun(run);
   }
 
   finishRun(run: Run): void {
     
     this.runService.finishRun(run);
     run.finished="yes";
+  
  
   }
 
   deleteRun(run: Run): void {
-
+    
     this.runService.deleteRun(run);
     this.run = null;
+    
   }
-  constructor(private trainingService: TrainingService, private runService: RunService, private http: HttpClient) { }
+
+  constructor(private trainingService: TrainingService, private runService: RunService) { }
 
   ngOnInit() {
     this.getTrainings();
