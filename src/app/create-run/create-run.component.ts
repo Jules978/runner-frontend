@@ -33,8 +33,7 @@ export class CreateRunComponent implements OnInit {
         "time": null,
         "score": null,
         "avspeed": null,
-        "overdue": "no",
-        "finished": "no",
+        "status": "planned",
         "comment": form.value.comment,
         "training": {
           "id": form.value.training            

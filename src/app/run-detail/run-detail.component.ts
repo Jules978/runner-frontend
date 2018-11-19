@@ -24,8 +24,8 @@ export class RunDetailComponent implements OnInit {
   }
  
 
-  unfinishedCheck(finished: string): boolean{
-    if(finished == "no"){return true} else { return false}
+  unfinishedCheck(status: string): boolean{
+    return status != "finished";
   }
 
   updateRun(run: Run): void {
@@ -36,7 +36,7 @@ export class RunDetailComponent implements OnInit {
   finishRun(run: Run): void {
     
     this.runService.finishRun(run);
-    run.finished="yes";
+    run.status="finished";
   
  
   }

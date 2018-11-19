@@ -8,8 +8,7 @@ export class Run {
     time: number;
     avspeed: number;
     score: number;
-    overdue: string;
-    finished: string;
+    status: string;
     comment: string;
     training: Training;
 }

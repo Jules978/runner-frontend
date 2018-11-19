@@ -10,8 +10,7 @@ export const RUNS: Run[] = [
         time: 60,
         avspeed: 6,
         score: 7,
-        overdue: 'overdueRun',
-        finished: 'yes',
+        status: 'overdue',
         comment: 'pretty nice weather!',
         training: {
             id:1,
@@ -28,8 +27,7 @@ export const RUNS: Run[] = [
         time: 30,
         avspeed: 6,
         score: 7,
-        overdue: 'no',
-        finished: 'yes',
+        status: 'finished',
         comment: 'pretty nice weather!',
         training: {
             id:1,
@@ -46,8 +44,7 @@ export const RUNS: Run[] = [
         time: 130,
         avspeed: 6.5,
         score: 6,
-        overdue: 'no',
-        finished: 'yes',
+        status: 'finished',
         comment: 'pretty nice weather!',
         training: {
             id:1,
@@ -64,8 +61,7 @@ export const RUNS: Run[] = [
         time: null,
         avspeed: null,
         score: null,
-        overdue: 'no',
-        finished: 'no',
+        status: 'planned',
         comment: '',
         training: {
             id:1,

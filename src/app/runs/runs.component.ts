@@ -22,20 +22,27 @@ export class RunsComponent implements OnInit {
 
   }
 
-  giveClass(overdue: string, finished: string): string{ 
-    if(overdue == "no"){
-      if(finished == "no"){
-        return "list-group-item list-group-item-action"
-      } else {
-        return "list-group-item list-group-item-action list-group-item-success"
+  giveClass(status: string): string{ 
+
+    switch (status) {
+      case "overdue": {
+        return "list-group-item list-group-item-action";
       }
-      
-    } else { 
-      if (finished =="no") {
-        return "list-group-item list-group-item-action list-group-item-warning"
-      } 
-      return "list-group-item list-group-item-action list-group-item-success"
+      case "finished": {
+        return "list-group-item list-group-item-success";
+      }
+      case "planned": {
+        return "list-group-item list-group-item-info";
+      }
     }
+  }
+
+  giveClassAlt(status: string): string {
+    if (status == "overdue"){
+      return "list-group-item list-group-item-action";
+    } else if (status == "finished") {
+      return "list-group-item list-group-item-success";
+    } else {return "list-group-item list-group-item-info";}
   }
 
   constructor(private runService: RunService) { }

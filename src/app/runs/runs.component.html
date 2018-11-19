@@ -10,7 +10,7 @@
       <ul class="runs" class="list-group">
           <li class="list-group-item list-group-item-light"><h5>All runs</h5></li>
         <li *ngFor="let run of runs" [class.selected]="run === selectedRun"
-        (click)="onSelect(run)" [ngClass]="giveClass(run.overdue, run.finished)">
+        (click)="onSelect(run)" [ngClass]="giveClass(run.status)">
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1">{{run.distance}} km</h5>
           <small class="text-muted">{{run.date}}</small>

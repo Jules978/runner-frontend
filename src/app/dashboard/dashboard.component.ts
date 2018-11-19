@@ -21,11 +21,11 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  giveClass(overdue: string): string{ 
-    if(overdue == "no"){
+  giveClass(status: string): string{ 
+    if(status != "overdue"){
       return "list-group-item list-group-item-action"
     } else { 
-      return "list-group-item list-group-item-action list-group-item-warning"
+      return "list-group-item list-group-item-warning"
     }
   }
 

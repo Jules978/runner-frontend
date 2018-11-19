@@ -22,7 +22,7 @@
                 <p class="card-text" *ngIf="run.time" ><span>Speed: </span>{{run.avspeed}} min/km</p>
                 <p class="card-text"><span>Training: </span>{{run.training.name}}</p>
                 <p class="card-text"><span>Comment: </span>{{run.comment}}</p>
-                <div class="card-text" *ngIf="(unfinishedCheck(run.finished))">
+                <div class="card-text" *ngIf="(unfinishedCheck(run.status))">
                   <p> finished the run?</p>
                   <label>Distance:
                       <input type="number" [(ngModel)]="run.distance" placeholder="distance" value="{{run.distance}}"/>
