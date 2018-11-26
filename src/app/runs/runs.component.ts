@@ -37,14 +37,6 @@ export class RunsComponent implements OnInit {
     }
   }
 
-  giveClassAlt(status: string): string {
-    if (status == "overdue"){
-      return "list-group-item list-group-item-action";
-    } else if (status == "finished") {
-      return "list-group-item list-group-item-success";
-    } else {return "list-group-item list-group-item-info";}
-  }
-
   constructor(private runService: RunService) { }
 
   ngOnInit() {

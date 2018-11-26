@@ -1,14 +1,16 @@
 <div class="container-fluid" id="main">
-  
+
   <div class="row" id="contentContainer">
     <div class="col-lg">
-        <h1 id="title">Training Overview</h1>
-      <app-training-detail class="container" [training]="selectedTraining"></app-training-detail>
+      <h1 id="title">Training Overview</h1>
+      <app-training-detail [training]="selectedTraining"></app-training-detail>
     </div>
 
     <div class="col col-lg-3" id="listContainer">
       <ul class="runs" class="list-group">
-          <li class="list-group-item list-group-item-light"><h5>All training</h5></li>
+        <li class="list-group-item list-group-item-light">
+          <h5>All training</h5>
+        </li>
         <li *ngFor="let training of trainings" [class.selected]="training === selectedTraining" (click)="onSelect(training)"
           class="list-group-item list-group-item-action">
           <div class="d-flex w-100 justify-content-between">

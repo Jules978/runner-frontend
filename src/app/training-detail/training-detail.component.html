@@ -1,57 +1,53 @@
 <div *ngIf="training" class="container-fluid">
+  <div class="card">
+    <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+          aria-selected="true">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="profile"
+          aria-selected="false">Edit</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="delete-tab" data-toggle="tab" href="#delete" role="tab" aria-controls="delete"
+          aria-selected="false">Delete</a>
+      </li>
 
-    <h2 id="{{training.name}}">{{training.name}} - {{training.type}} : Details</h2>
-  
-  </div>
-
-  <div  class="card">
-      <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="profile" aria-selected="false">Edit</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" id="delete-tab" data-toggle="tab" href="#delete" role="tab" aria-controls="delete" aria-selected="false">Delete</a>
-            </li>
-     
-        </ul>
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-              <div class="card-body">
-                <h5 class="card-title">{{training.name}}: Details</h5>
-                <p class="card-text"><span>Type: </span>{{training.type}}</p>
-                <p class="card-text"><span>Description: </span>{{training.description}}</p>
-              </div>
-          </div>
-          <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
-              <label>Name:
-                  <input [(ngModel)]="training.name" placeholder="sub 35 min 5k" value="{{training.name}}"/>
-                </label>
-                <br>
-                <label>Type:
-                  <input [(ngModel)]="training.type" placeholder="speed improvement" value="{{training.type}}"/>
-                </label>
-                <br>
-                <label>Description:
-                  <input [(ngModel)]="training.description" placeholder="go faster" value="{{training.description}}"/>
-                </label>
-                 
-                <button (click)="updateTraining(training)"> test update</button>
-          </div>
-          <div class="tab-pane fade" id="delete" role="tabpanel" aria-labelledby="delete-tab">
-            <div class="card">
-                <h5 class="card-title">Are you sure you want to delete {{training.name}}?</h5>
-                <p class="card-text" ><span>Type: </span>{{training.type}} min</p>
-                <p class="card-text"><span>Description: </span>{{training.description}}</p>
-                <h6 class="card-subtitle mb-2 text-muted">runs in this training will be updated</h6>
-                <button (click)="deleteTraining(training)">YES, remove this training!</button>
-            </div>
-          </div>
-          
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="card-body">
+          <h5 class="card-title">{{training.name}}</h5>
+          <p class="card-text"><span>Type: </span>{{training.type}}</p>
+          <p class="card-text"><span>Description: </span>{{training.description}}</p>
         </div>
-  
-   
-  
+      </div>
+      <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
+        <label>Name:
+          <input [(ngModel)]="training.name" placeholder="sub 35 min 5k" value="{{training.name}}" />
+        </label>
+        <br>
+        <label>Type:
+          <input [(ngModel)]="training.type" placeholder="speed improvement" value="{{training.type}}" />
+        </label>
+        <br>
+        <label>Description:
+          <input [(ngModel)]="training.description" placeholder="go faster" value="{{training.description}}" />
+        </label>
+
+        <button (click)="updateTraining(training)"> test update</button>
+      </div>
+      <div class="tab-pane fade" id="delete" role="tabpanel" aria-labelledby="delete-tab">
+        <div class="card">
+          <h5 class="card-title">Are you sure you want to delete {{training.name}}?</h5>
+          <p class="card-text"><span>Type: </span>{{training.type}} min</p>
+          <p class="card-text"><span>Description: </span>{{training.description}}</p>
+          <h6 class="card-subtitle mb-2 text-muted">runs in this training will be updated</h6>
+          <button (click)="deleteTraining(training)">YES, remove this training!</button>
+        </div>
+      </div>
+
+    </div>
   </div>
+</div>
