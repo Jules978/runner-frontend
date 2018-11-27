@@ -9,6 +9,7 @@ import { TrainingService } from '../training.service';
 })
 export class TrainingDetailComponent implements OnInit {
   @Input() training: Training;
+  trainingdetails: any;
 
   deleteTraining(training: Training): void {
 
@@ -21,10 +22,12 @@ export class TrainingDetailComponent implements OnInit {
 
     this.trainingService.updateTraining(training);
   }
+
   constructor(private trainingService: TrainingService) { }
 
   ngOnInit() {
-    console.log(this.training)
+    
   }
+  
 
 }

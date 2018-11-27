@@ -4,22 +4,20 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Run } from './run';
-import { RUNS} from './mock-runs';
 import { Training } from './training';
-import { TRAININGS} from './mock-trainings';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TrainingService {
   private baseTrianingUrl = "http://localhost:8080/api/training"
-  private allTrainingsUrl = "http://localhost:8080/api/training/all"
+  private allTrainingsUrl = "http://localhost:8080/api/training/alltest"
 
   getTrainings(): Observable<Training[]> {
     return this.http.get<Training[]>(this.allTrainingsUrl).pipe(
       catchError(this.handleError('getTrainings', []))
     );
-  }
+  };
 
    updateTraining(training: Training): void {
    

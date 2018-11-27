@@ -4,9 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Run } from './run';
-import { RUNS } from './mock-runs';
 import { Training } from './training';
-import { TRAININGS } from './mock-trainings';
 
 @Injectable({
   providedIn: 'root'

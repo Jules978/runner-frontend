@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Training } from '../Training';
-import { TRAININGS} from '../mock-trainings';
 import { TrainingService } from '../training.service';
 
 @Component({
