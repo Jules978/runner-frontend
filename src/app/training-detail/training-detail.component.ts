@@ -19,7 +19,6 @@ export class TrainingDetailComponent implements OnInit {
   }
 
   updateTraining(training: Training): void {
-
     this.trainingService.updateTraining(training);
   }
 

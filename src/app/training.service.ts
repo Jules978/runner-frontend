@@ -11,7 +11,7 @@ import { Training } from './training';
 })
 export class TrainingService {
   private baseTrianingUrl = "http://localhost:8080/api/training"
-  private allTrainingsUrl = "http://localhost:8080/api/training/alltest"
+  private allTrainingsUrl = "http://localhost:8080/api/training/all"
 
   getTrainings(): Observable<Training[]> {
     return this.http.get<Training[]>(this.allTrainingsUrl).pipe(

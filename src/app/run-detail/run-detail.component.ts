@@ -29,23 +29,17 @@ export class RunDetailComponent implements OnInit {
   }
 
   updateRun(run: Run): void {
-    console.log(run);
     this.runService.updateRun(run);
   }
 
   finishRun(run: Run): void {
-    
     this.runService.finishRun(run);
     run.status="finished";
-  
- 
   }
 
   deleteRun(run: Run): void {
-    
     this.runService.deleteRun(run);
     this.run = null;
-    
   }
 
   constructor(private trainingService: TrainingService, private runService: RunService) { }
